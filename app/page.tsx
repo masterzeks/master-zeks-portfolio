@@ -46,7 +46,6 @@ const experience = [
   },
 ];
 
-];
 const capabilities=[
  {icon:PenLine,title:'Content & storytelling',copy:'Research-backed posts, campaigns, and explanations that turn technical ideas into stories worth reading.'},
  {icon:Users,title:'Community & growth',copy:'Onboarding, Discord engagement, partnerships, and events that help communities connect.'},
