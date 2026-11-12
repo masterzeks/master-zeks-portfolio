@@ -14,11 +14,38 @@ const work = [
   {number:'04', platform:'TIKTOK', type:'VIDEO CONTENT', title:'Short-form video', description:'A selected video sample. Watch the original on TikTok.', href:'https://vt.tiktok.com/ZSpHU2mp1/', icon:Video},
   {number:'05', platform:'X / TWITTER', type:'PUBLISHED CONTENT', title:'Web3 storytelling 04', description:'Another published example from my content portfolio.', href:'https://x.com/m_zekks/status/2052649844234187080', icon:PenLine},
 ];
+
 const experience = [
- {name:'Camp Network',role:'Ambassador',period:,description:'Community onboarding, awareness campaigns, and ecosystem communications.',stat:'100+ onboarded'},
- {name:'Web3 UNILAG',role:'Business Development Manager',period:,description:'Event coordination, partnership outreach, and sponsorship conversations.',stat:'500+ event participants'},
- {name:'Lombard Finance',role: 'Content',period:,description:'created content that onboarded 100+ users .',stat:'UG content'},
- {name:'Goat Network',role:'Content',period:,description:'created content that onboarded 100+ users.',stat:'UG content'},
+  {
+    name: "Camp Network",
+    role: "Ambassador",
+    description:
+      "Community onboarding, awareness campaigns, and ecosystem communications.",
+    stat: "100+ users onboarded",
+  },
+  {
+    name: "Web3 UNILAG",
+    role: "Business Development Manager",
+    description:
+      "Event coordination, partnership outreach, and sponsorship conversations.",
+    stat: "500+ event participants",
+  },
+  {
+    name: "Lombard Finance",
+    role: "Content and Community",
+    description:
+      "Created content and supported community engagement.",
+    stat: "UGC content",
+  },
+  {
+    name: "Goat Network",
+    role: "Content and Community",
+    description:
+      "Created content and supported community growth.",
+    stat: "UGC content",
+  },
+];
+
 ];
 const capabilities=[
  {icon:PenLine,title:'Content & storytelling',copy:'Research-backed posts, campaigns, and explanations that turn technical ideas into stories worth reading.'},
