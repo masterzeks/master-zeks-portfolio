@@ -12,8 +12,9 @@ const experience = [
   { name: 'Goat Network', role: 'Content & Community', detail: 'Creative communication and community growth.', stat: 'Ecosystem content' },
 ];
 const skills = ['Web3 storytelling', 'Content strategy', 'Community growth', 'AI & automation', 'Research & writing', 'Creative direction'];
-export default function Home() 
-  return <main>
+export default function Home() {
+  return (
+    <main>
     <div className="ambient ambient-one"/><div className="ambient ambient-two"/>
     <div className="shell">
       <header className="nav"><a href="#top" className="brand"><span className="brand-mark"></span> master zeks<span className="brand-dot">.</span></a><nav><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a></nav><a className="nav-contact" href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Let us talk <span> </span></a></header>
@@ -68,7 +69,8 @@ export default function Home()
       <section className="section automation"><div className="section-kicker"><span>04 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div><div className="automation-panel"><span className="panel-icon"> </span><div><span className="panel-label">AI / AUTOMATION / CREATIVE TECH</span><h2>Curious by default.<br/><em>Building by instinct.</em></h2><p>When I am not writing, I am experimenting with AI workflows, creative video, websites and bots,finding smarter ways to bring ideas to life.</p></div><span className="panel-decoration"></span></div></section>
       <section id="contact" className="contact"><span className="eyebrow"><span className="status-dot"/> HAVE A PROJECT IN MIND?</span><h2>Let us make<br/><em>something matter.</em></h2><p>Good stories start with a conversation. Mine is always open.</p><a className="primary-button" href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Start a conversation <span></span></a></section>
       <footer><a className="brand" href="#top"><span className="brand-mark"></span> master zeks<span className="brand-dot">.</span></a><span> {new Date().getFullYear()}</span><div className="socials"><a href="https://x.com/m_zekks" target="_blank" rel="noreferrer">X </a><a href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Telegram </a><a href="https://www.linkedin.com/in/eghonghon-azeke-241488239" target="_blank" rel="noreferrer">LinkedIn </a></div></footer>
-    </div>
-  </main>
+      </div>
+    </main>
+  );
 }
 
