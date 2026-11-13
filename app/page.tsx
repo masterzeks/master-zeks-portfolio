@@ -1,25 +1,22 @@
+
 const works = [
-  { type: 'CONTENT / STORYTELLING', title: 'Web3, explained with clarity.', description: 'Making complex crypto narratives feel simple, relevant, and worth reading.', href: 'https://x.com/m_zekks/status/2062458237681586257', number: '01' },
-  { type: 'ECOSYSTEM / RESEARCH', title: 'Finding the story behind the technology.', description: 'Thoughtful research-led writing that connects products with people.', href: 'https://x.com/m_zekks/status/2119655512094470390', number: '02' },
-  { type: 'COMMUNITY / CONTENT', title: 'Content built for real engagement.', description: 'Useful narratives, genuine conversations, and community-first communication.', href: 'https://x.com/m_zekks/status/2001925470489645112', number: '03' },
-  { type: 'VIDEO / CREATIVE', title: 'Ideas that move.', description: 'Short-form video and visual storytelling for digital-native audiences.', href: 'https://vt.tiktok.com/ZSpHU2mp1/', number: '04' },
-  { type: 'WEB3 / EDUCATION', title: 'Turning attention into understanding.', description: 'Making emerging ecosystems accessible to the next wave of users.', href: 'https://x.com/m_zekks/status/2052649844234187080', number: '05' },
+  { type: "CONTENT / STORYTELLING", title: "Web3, explained with clarity.", description: "Making complex crypto narratives feel simple, relevant, and worth reading.", href: "https://x.com/m_zekks/status/2062458237681586257", number: "01" },
+  { type: "ECOSYSTEM / RESEARCH", title: "Finding the story behind the technology.", description: "Thoughtful research-led writing that connects products with people.", href: "https://x.com/m_zekks/status/2119655512094470390", number: "02" },
+  { type: "COMMUNITY / CONTENT", title: "Content built for real engagement.", description: "Useful narratives, genuine conversations, and community-first communication.", href: "https://x.com/m_zekks/status/2001925470489645112", number: "03" },
+  { type: "VIDEO / CREATIVE", title: "Ideas that move.", description: "Short-form video and visual storytelling for digital-native audiences.", href: "https://vt.tiktok.com/ZSpHU2mp1/", number: "04" },
+  { type: "WEB3 / EDUCATION", title: "Turning attention into understanding.", description: "Making emerging ecosystems accessible to the next wave of users.", href: "https://x.com/m_zekks/status/2052649844234187080", number: "05" },
 ];
 
 const experience = [
-  { name: 'Camp Network', role: 'Ambassador', detail: 'Community onboarding, campaigns and ecosystem storytelling.', stat: '100+ onboarded' },
-  { name: 'Web3 UNILAG', role: 'Business Development Manager', detail: 'Partnership outreach, sponsorships and community events.', stat: '500+ attendees' },
-  { name: 'Lombard Finance', role: 'Content & Community', detail: 'Content creation and community engagement.', stat: 'Web3 growth' },
-  { name: 'Goat Network', role: 'Content & Community', detail: 'Creative communication and community growth.', stat: 'Ecosystem content' },
+  { name: "Camp Network", role: "Ambassador", detail: "Community onboarding, campaigns and ecosystem storytelling.", stat: "100+ onboarded" },
+  { name: "Web3 UNILAG", role: "Business Development Manager", detail: "Partnership outreach, sponsorships and community events.", stat: "500+ attendees" },
+  { name: "Lombard Finance", role: "Content & Community", detail: "Content creation and community engagement.", stat: "Web3 growth" },
+  { name: "Goat Network", role: "Content & Community", detail: "Creative communication and community growth.", stat: "Ecosystem content" },
 ];
 
 const skills = [
-  'Web3 storytelling',
-  'Content strategy',
-  'Community growth',
-  'AI & automation',
-  'Research & writing',
-  'Creative direction',
+  "Web3 storytelling", "Content strategy", "Community growth",
+  "AI & automation", "Research & writing", "Creative direction",
 ];
 
 export default function Home() {
@@ -62,7 +59,7 @@ export default function Home() {
           <div><strong>100<span>+</span></strong><p>People onboarded</p></div>
           <div><strong>500<span>+</span></strong><p>Event participants</p></div>
           <div><strong>04</strong><p>Web3 teams &amp; communities</p></div>
-          <div><strong>AI</strong><p>Curiosity to create</p></div>
+          <div><strong>Always</strong><p>Curious to create</p></div>
         </section>
 
         <section id="about" className="section about">
@@ -94,3 +91,67 @@ export default function Home() {
           </div>
           <div className="work-grid">
             {works.map((work, i) => (
+              <a href={work.href} key={work.number} target="_blank" rel="noreferrer" className={"work-card work-card-" + i}>
+                <div className="work-card-top"><span>{work.type}</span><span className="work-open" /></div>
+                <div className="work-art" aria-hidden="true"><span /></div>
+                <div className="work-card-bottom">
+                  <span className="work-num">{work.number} / 05</span>
+                  <h3>{work.title}</h3>
+                  <p>{work.description}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section id="experience" className="section experience">
+          <div className="section-kicker"><span>03 / EXPERIENCE</span><span>COMMUNITIES I HAVE HELPED SHAPE</span></div>
+          <div className="section-heading">
+            <h2>Built with<br /><em>good people.</em></h2>
+            <p>Collaborations that sharpened my craft<br />and expanded my perspective.</p>
+          </div>
+          <div className="experience-list">
+            {experience.map((item, i) => (
+              <div className="experience-row" key={item.name}>
+                <span className="experience-count">0{i + 1}</span>
+                <div className="experience-name"><h3>{item.name}</h3><p>{item.role}</p></div>
+                <p className="experience-detail">{item.detail}</p>
+                <span className="experience-stat">{item.stat}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="section automation">
+          <div className="section-kicker"><span>04 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div>
+          <div className="automation-panel">
+            <span className="panel-icon" />
+            <div>
+              <span className="panel-label">AI / AUTOMATION / CREATIVE TECH</span>
+              <h2>Curious by default.<br /><em>Building by instinct.</em></h2>
+              <p>When I am not writing, I am experimenting with AI workflows, creative video, websites and bots, finding smarter ways to bring ideas to life.</p>
+            </div>
+            <span className="panel-decoration" />
+          </div>
+        </section>
+
+        <section id="contact" className="contact">
+          <span className="eyebrow"><span className="status-dot" /> HAVE A PROJECT IN MIND?</span>
+          <h2>Let us make<br /><em>something matter.</em></h2>
+          <p>Good stories start with a conversation. Mine is always open.</p>
+          <a className="primary-button" href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Start a conversation <span /></a>
+        </section>
+
+        <footer>
+          <a className="brand" href="#top"><span className="brand-mark" /> master zeks<span className="brand-dot">.</span></a>
+          <span>{new Date().getFullYear()}</span>
+          <div className="socials">
+            <a href="https://x.com/m_zekks" target="_blank" rel="noreferrer">X</a>
+            <a href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Telegram</a>
+            <a href="https://www.linkedin.com/in/eghonghon-azeke-241488239" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </footer>
+      </div>
+    </main>
+  );
+}
