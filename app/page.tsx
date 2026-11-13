@@ -21,7 +21,50 @@ export default function Home()
       <section className="stats" aria-label="Highlights"><div><strong>100<span>+</span></strong><p>People onboarded</p></div><div><strong>500<span>+</span></strong><p>Event participants</p></div><div><strong>04</strong><p>Web3 teams & communities</p></div><div><strong> </strong><p>Curiosity to create</p></div></section>
       <section id="about" className="section about"><div className="section-kicker"><span>01 / ABOUT ME</span><span>THE PERSON BEHIND THE POSTS</span></div><div className="about-grid"><h2>Not just content.<br/><em>Connection.</em></h2><div className="about-body"><p>I am Master Zeks, a Web3 creator who believes the best ideas deserve more than buzzwords.</p><p>I blend research, writing, community building and AI-powered creativity to make emerging technology feel human. From helping communities grow to turning technical concepts into stories worth sharing, I care about making an impact that lasts beyond the timeline.</p><a className="text-link" href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Let us build something together <span></span></a></div></div><div className="skills-grid">{skills.map((skill, i)=><div className="skill" key={skill}><span className="skill-icon"></span><span>{skill}</span><span className="skill-arrow">,</span></div>)</div></section>
       <section id="work" className="section work"><div className="section-kicker"><span>02 / SELECTED WORK</span><span>WORDS, IDEAS & EXPERIMENTS</span></div><div className="section-heading"><h2>Proof is in<br/><em>the work.</em></h2><p>A few things I have put into the world.<br/>Click through to explore the original posts.</p></div><div className="work-grid">{works.map((work,i)=><a href={work.href} key={work.number} target="_blank" rel="noreferrer" className={'work-card work-card-'+i}><div className="work-card-top"><span>{work.type}</span><span className="work-open"></span></div><div className="work-art" aria-hidden="true"><span></span></div><div className="work-card-bottom"><span className="work-num">{work.number} / 05</span><h3>{work.title}</h3><p>{work.description}</p></div></a>)}</div></section>
-      <section id="experience" className="section experience"><div className="section-kicker"><span>03 / EXPERIENCE</span><span>COMMUNITIES I HAVE HELPED SHAPE</span></div><div className="section-heading"><h2>Built with<br/><em>good people.</em></h2><p>Collaborations that sharpened my craft<br/>and expanded my perspective.</p></div><div className="experience-list">{experience.map((item,i)=><div className="experience-row" key={item.name}><span className="experience-count">0{i+1}</span><div className="experience-name"><h3>{item.name}</h3><p>{item.role}</p></div><p className="experience-detail">{item.detail}</p><span className="experience-stat">{item.stat}</span></div>)}</div></section>
+     
+<section id="experience" className="section experience">
+  <div className="section-kicker">
+    <span>03 / EXPERIENCE</span>
+    <span>COMMUNITIES I HAVE HELPED SHAPE</span>
+  </div>
+
+  <div className="section-heading">
+    <h2>
+      Built with
+      <br />
+      <em>good people.</em>
+    </h2>
+    <p>
+      Collaborations that sharpened my craft
+      <br />
+      and expanded my perspective.
+    </p>
+  </div>
+
+  <div className="experience-list">
+    {experience.map((item, i) => (
+      <div className="experience-row" key={item.name}>
+        <span className="experience-count">
+          0{i + 1}
+        </span>
+
+        <div className="experience-name">
+          <h3>{item.name}</h3>
+          <p>{item.role}</p>
+        </div>
+
+        <p className="experience-detail">
+          {item.detail}
+        </p>
+
+        <span className="experience-stat">
+          {item.stat}
+        </span>
+      </div>
+    ))}
+  </div>
+</section>
+
       <section className="section automation"><div className="section-kicker"><span>04 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div><div className="automation-panel"><span className="panel-icon"> </span><div><span className="panel-label">AI / AUTOMATION / CREATIVE TECH</span><h2>Curious by default.<br/><em>Building by instinct.</em></h2><p>When I am not writing, I am experimenting with AI workflows, creative video, websites and bots,finding smarter ways to bring ideas to life.</p></div><span className="panel-decoration"></span></div></section>
       <section id="contact" className="contact"><span className="eyebrow"><span className="status-dot"/> HAVE A PROJECT IN MIND?</span><h2>Let us make<br/><em>something matter.</em></h2><p>Good stories start with a conversation. Mine is always open.</p><a className="primary-button" href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Start a conversation <span></span></a></section>
       <footer><a className="brand" href="#top"><span className="brand-mark"></span> master zeks<span className="brand-dot">.</span></a><span> {new Date().getFullYear()}</span><div className="socials"><a href="https://x.com/m_zekks" target="_blank" rel="noreferrer">X </a><a href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Telegram </a><a href="https://www.linkedin.com/in/eghonghon-azeke-241488239" target="_blank" rel="noreferrer">LinkedIn </a></div></footer>
