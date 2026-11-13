@@ -21,7 +21,58 @@ export default function Home() {
       <section id="top" className="hero"><div className="hero-top"><span className="eyebrow"><span className="status-dot"/> AVAILABLE FOR COLLABORATIONS</span><span className="hero-index">INDEPENDENT CREATOR / WEB3</span></div><div className="avatar-wrap"><div className="avatar-halo"/><img className="avatar" src="/profile.jpg" alt="Master Zeks illustrated profile portrait"/><span className="avatar-spark"></span></div><p className="intro">Hey, I am <span>Master Zeks</span> <span className="wave"></span></p><h1>I turn <em>complex ideas</em><br/>into stories people<br/><span className="outlined">care about.</span></h1><p className="hero-copy">Web3 creator, community builder & AI enthusiast.<br/>I help ambitious ideas find their voice, audience and momentum.</p><div className="hero-actions"><a className="primary-button" href="#work">Explore my work <span></span></a><a className="secondary-button" href="https://x.com/m_zekks" target="_blank" rel="noreferrer">Find me on X <span></span></a></div><div className="scroll-hint">SCROLL TO EXPLORE <span></span></div></section>
       <section className="stats" aria-label="Highlights"><div><strong>100<span>+</span></strong><p>People onboarded</p></div><div><strong>500<span>+</span></strong><p>Event participants</p></div><div><strong>04</strong><p>Web3 teams & communities</p></div><div><strong> </strong><p>Curiosity to create</p></div></section>
       <section id="about" className="section about"><div className="section-kicker"><span>01 / ABOUT ME</span><span>THE PERSON BEHIND THE POSTS</span></div><div className="about-grid"><h2>Not just content.<br/><em>Connection.</em></h2><div className="about-body"><p>I am Master Zeks, a Web3 creator who believes the best ideas deserve more than buzzwords.</p><p>I blend research, writing, community building and AI-powered creativity to make emerging technology feel human. From helping communities grow to turning technical concepts into stories worth sharing, I care about making an impact that lasts beyond the timeline.</p><a className="text-link" href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Let us build something together <span></span></a></div></div><div className="skills-grid">{skills.map((skill, i)=><div className="skill" key={skill}><span className="skill-icon"></span><span>{skill}</span><span className="skill-arrow">,</span></div>)</div></section>
-      <section id="work" className="section work"><div className="section-kicker"><span>02 / SELECTED WORK</span><span>WORDS, IDEAS & EXPERIMENTS</span></div><div className="section-heading"><h2>Proof is in<br/><em>the work.</em></h2><p>A few things I have put into the world.<br/>Click through to explore the original posts.</p></div><div className="work-grid">{works.map((work,i)=><a href={work.href} key={work.number} target="_blank" rel="noreferrer" className={'work-card work-card-'+i}><div className="work-card-top"><span>{work.type}</span><span className="work-open"></span></div><div className="work-art" aria-hidden="true"><span></span></div><div className="work-card-bottom"><span className="work-num">{work.number} / 05</span><h3>{work.title}</h3><p>{work.description}</p></div></a>)}</div></section>
+     
+<section id="work" className="section work">
+  <div className="section-kicker">
+    <span>02 / SELECTED WORK</span>
+    <span>WORDS, IDEAS & EXPERIMENTS</span>
+  </div>
+
+  <div className="section-heading">
+    <h2>
+      Proof is in
+      <br />
+      <em>the work.</em>
+    </h2>
+
+    <p>
+      A few things I have put into the world.
+      <br />
+      Click through to explore the original posts.
+    </p>
+  </div>
+
+  <div className="work-grid">
+    {works.map((work, i) => (
+      <a
+        href={work.href}
+        key={work.number}
+        target="_blank"
+        rel="noreferrer"
+        className={"work-card work-card-" + i}
+      >
+        <div className="work-card-top">
+          <span>{work.type}</span>
+          <span className="work-open"></span>
+        </div>
+
+        <div className="work-art" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div className="work-card-bottom">
+          <span className="work-num">
+            {work.number} / 05
+          </span>
+
+          <h3>{work.title}</h3>
+          <p>{work.description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
      
 <section id="experience" className="section experience">
   <div className="section-kicker">
