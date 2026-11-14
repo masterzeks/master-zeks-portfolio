@@ -29,6 +29,42 @@ const clips = [
   },
 ];
 
+const videos = [
+  {
+    title: "What Is Web3? (series 1)",
+    href: "https://www.tiktok.com/@master.zeks/video/7555491342160284936",
+    thumb: "/videos/what-is-web3.jpg",
+    alt: "Cover for What Is Web3? (series 1)",
+    views: "9.7K views",
+    date: "29 Sep 2025",
+    width: 540,
+    height: 960,
+    play: true,
+  },
+  {
+    title: "Tips to survive the bear market",
+    href: "https://www.tiktok.com/@master.zeks/video/7603817808727690503",
+    thumb: "/videos/bear-market-tips.jpg",
+    alt: "Cover for Tips to survive the bear market",
+    views: "1.1K views",
+    date: "6 Feb 2026",
+    width: 540,
+    height: 960,
+    play: true,
+  },
+  {
+    title: "Here's my advice to anyone just starting Web3",
+    href: "https://www.tiktok.com/@master.zeks/photo/7575970653497511186",
+    thumb: "/videos/your-mind-matters.jpg",
+    alt: "Cover for Here's my advice to anyone just starting Web3",
+    views: "1.7K views",
+    date: "23 Nov 2025",
+    width: 1080,
+    height: 1440,
+    play: false,
+  },
+];
+
 const events = [
   {
     title: "Camp Nigeria Community Outreach",
@@ -77,6 +113,7 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#work">Work</a>
             <a href="#clips">Clips</a>
+            <a href="#videos">Videos</a>
             <a href="#events">Events</a>
             <a href="#experience">Experience</a>
           </nav>
@@ -184,8 +221,34 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="videos" className="section videos">
+          <div className="section-kicker"><span>04 / VIDEOS</span><span>TIKTOK</span></div>
+          <div className="section-heading">
+            <h2>Videos.</h2>
+            <p>Videos I made.</p>
+          </div>
+          <div className="videos-grid">
+            {videos.map((video) => (
+              <a href={video.href} key={video.href} target="_blank" rel="noreferrer" className="clip-card video-card">
+                <div className="clip-thumb video-thumb">
+                  <img src={video.thumb} alt={video.alt} width={video.width} height={video.height} />
+                  {video.play ? <span className="clip-play" aria-hidden="true" /> : null}
+                </div>
+                <div className="clip-meta">
+                  <h3>{video.title}</h3>
+                  <p>
+                    {video.views ? <span className="clip-views">{video.views}</span> : null}
+                    {video.views && video.date ? <span className="clip-dot" /> : null}
+                    {video.date ? <span className="clip-date">{video.date}</span> : null}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section id="events" className="section events">
-          <div className="section-kicker"><span>04 / EVENTS</span><span>COMMUNITY</span></div>
+          <div className="section-kicker"><span>05 / EVENTS</span><span>COMMUNITY</span></div>
           <div className="section-heading">
             <h2>Events.</h2>
           </div>
@@ -225,7 +288,7 @@ export default function Home() {
         </section>
 
         <section id="experience" className="section experience">
-          <div className="section-kicker"><span>05 / EXPERIENCE</span><span>COMMUNITIES I HAVE HELPED SHAPE</span></div>
+          <div className="section-kicker"><span>06 / EXPERIENCE</span><span>COMMUNITIES I HAVE HELPED SHAPE</span></div>
           <div className="section-heading">
             <h2>Built with<br /><em>good people.</em></h2>
             <p>Some collaborations that sharpened my craft<br />and expanded my perspective.</p>
@@ -264,7 +327,7 @@ export default function Home() {
         </section>
 
         <section className="section automation">
-          <div className="section-kicker"><span>06 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div>
+          <div className="section-kicker"><span>07 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div>
           <div className="automation-panel">
             <span className="panel-icon" />
             <div>

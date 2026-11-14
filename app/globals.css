@@ -343,3 +343,53 @@ a.experience-row-link:hover h3 {
     aspect-ratio: 3 / 4;
   }
 }
+
+
+/* Videos section — Clips card chrome, 9:16 TikTok covers. */
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.video-card .video-thumb {
+  aspect-ratio: 9 / 16;
+}
+
+.video-card .video-thumb img {
+  object-position: center top;
+}
+
+@media (max-width: 1100px) {
+  .nav nav {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 850px) {
+  .videos-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .videos-grid .video-card {
+    flex: 0 0 min(72%, 260px);
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 550px) {
+  .videos-grid .video-card {
+    flex: 0 0 78%;
+  }
+
+  .video-card .clip-meta h3 {
+    font-size: 16px;
+  }
+}
