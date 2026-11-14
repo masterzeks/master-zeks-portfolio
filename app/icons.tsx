@@ -129,6 +129,23 @@ const skillPaths: Record<string, ReactNode> = {
   "Creative direction": (
     <path d="M5.5 16.5 12 5l6.5 11.5H5.5Z" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinejoin="round" />
   ),
+  "Web3 writing & storytelling": (
+    <path d="M5 6.5h9.5A2.5 2.5 0 0 1 17 9v9.5H7.5A2.5 2.5 0 0 1 5 16V6.5Z" stroke="currentColor" strokeWidth="1.6" fill="none" />
+  ),
+  "Community management": (
+    <>
+      <circle cx="9" cy="9" r="2.3" fill="currentColor" />
+      <circle cx="15.5" cy="9.5" r="2" fill="currentColor" />
+      <path d="M4.8 18c.6-2.4 2.3-3.7 4.3-3.7s3.6 1.3 4.2 3.7M14 14.6c1.6 0 3 .9 3.6 2.9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" fill="none" />
+    </>
+  ),
+  "AI-assisted content": (
+    <>
+      <rect x="7" y="7" width="10" height="10" rx="2.2" stroke="currentColor" strokeWidth="1.6" fill="none" />
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" />
+      <path d="M12 4.5v2.2M12 17.3v2.2M4.5 12h2.2M17.3 12h2.2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </>
+  ),
 };
 
 export function IconSkill({ name, className }: IconProps & { name: string }) {
