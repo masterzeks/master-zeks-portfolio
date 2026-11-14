@@ -1,17 +1,45 @@
-
 const works = [
   { type: "CONTENT / STORYTELLING", title: "Web3, explained with clarity.", description: "Making complex crypto narratives feel simple, relevant, and worth reading.", href: "https://x.com/m_zekks/status/2062458237681586257", number: "01" },
-  { type: "ECOSYSTEM / RESEARCH", title: "Finding the story behind the technology.", description: "Thoughtful research-led writing that connects products with people.", href: "https://x.com/m_zekks/status/2119655512094470390", number: "02" },
+  { type: "ECOSYSTEM / RESEARCH", title: "Finding the story behind the technology.", description: "Thoughtful research-led writing that connects products with people.", href: "https://x.com/m_zekks/status/2119655512094470390", number: "02", logo: "/logos/mojo-ai-avatar.jpg", logoClass: "logo-badge logo-badge-fill logo-badge-lg", logoAlt: "Mojo AI logo" },
   { type: "COMMUNITY / CONTENT", title: "Content built for real engagement.", description: "Useful narratives, genuine conversations, and community-first communication.", href: "https://x.com/m_zekks/status/2001925470489645112", number: "03" },
   { type: "VIDEO / CREATIVE", title: "Ideas that move.", description: "Short-form video and visual storytelling for digital-native audiences.", href: "https://vt.tiktok.com/ZSpHU2mp1/", number: "04" },
-  { type: "WEB3 / EDUCATION", title: "Turning attention into understanding.", description: "Making emerging ecosystems accessible to the next wave of users.", href: "https://x.com/m_zekks/status/2052649844234187080", number: "05" },
+  { type: "WEB3 / EDUCATION", title: "Turning attention into understanding.", description: "Making emerging ecosystems accessible to the next wave of users.", href: "https://x.com/m_zekks/status/2052649844234187080", number: "05", logo: "/logos/ton.svg", logoClass: "logo-badge logo-badge-fill logo-badge-lg", logoAlt: "TON logo" },
+];
+
+const clips = [
+  {
+    title: "Samuel Xeus on how he discovered Web3",
+    href: "https://x.com/M_zekks/status/2102721716300517749",
+    thumb: "/clips/samuel-xeus.jpg",
+    alt: "Thumbnail for Samuel Xeus on how he discovered Web3",
+    views: "2.1K views",
+    date: "23 Sep 2026",
+    width: 1200,
+    height: 682,
+  },
+  {
+    title: "What women understand about marketing and content",
+    href: "https://x.com/M_zekks/status/2119810290170630548",
+    thumb: "/clips/women-marketing.jpg",
+    alt: "Thumbnail for What women understand about marketing and content",
+    views: "364 views",
+    date: "9 Nov 2026",
+    width: 1200,
+    height: 686,
+  },
 ];
 
 const experience = [
-  { name: "Camp Network", role: "Ambassador", detail: "Community onboarding, campaigns and ecosystem storytelling.", stat: "100+ onboarded" },
-  { name: "Web3 UNILAG", role: "Business Development Manager", detail: "Partnership outreach, sponsorships and community events.", stat: "500+ attendees" },
-  { name: "Lombard Finance", role: "Content & Community", detail: "Content creation and community engagement.", stat: "Web3 growth" },
-  { name: "Goat Network", role: "Content & Community", detail: "Creative communication and community growth.", stat: "Ecosystem content" },
+  { name: "Mojo AI", role: "Affiliate", detail: "Affiliate partner for Mojo AI.", stat: "Nov 2026 – Present", logo: "/logos/mojo-ai-avatar.jpg", logoClass: "logo-badge logo-badge-fill" },
+  { name: "Web3 UNILAG", role: "Business Development Manager", detail: "Partnership outreach, sponsorships and community events.", stat: "Sep 2025 – Present", logo: "/logos/web3-unilag.png", logoClass: "logo-badge logo-badge-dark" },
+  { name: "Primus Labs", role: "Content", detail: "Educational threads explaining zkTLS and Primus's tools.", stat: "Oct – Nov 2026", logo: "/logos/primus-labs.png", logoClass: "logo-badge logo-badge-fill", href: "https://x.com/m_zekks/status/2106290151794110916" },
+  { name: "Acurast", role: "Content", detail: "Intro content on Acurast's decentralized compute network.", stat: "Sep – Nov 2026", logo: "/logos/acurast.jpg", logoClass: "logo-badge logo-badge-fill", href: "https://x.com/m_zekks/status/2104900508104196122" },
+  { name: "Bet25", role: "Content", detail: "Explainer posts on zero-margin sportsbook odds.", stat: "Oct 2026", logo: "/logos/bet25.jpg", logoClass: "logo-badge logo-badge-fill", href: "https://x.com/m_zekks/status/2114028468971200691" },
+  { name: "Camp Network", role: "Ambassador", detail: "Community onboarding, campaigns and ecosystem storytelling.", stat: "Apr 2025 – May 2026", logo: "/logos/camp-network.svg", logoClass: "logo-badge logo-badge-light" },
+  { name: "MEXC", role: "Partnership", detail: "Partnered with MEXC.", stat: "Jan 2026 – Apr 2026", logo: "/logos/mexc.png", logoClass: "logo-badge logo-badge-fill" },
+  { name: "Goat Network", role: "Content", detail: "Content for Goat Network.", stat: "Jun 2025 – Apr 2026", logo: "/logos/goat-network.svg", logoClass: "logo-badge logo-badge-light" },
+  { name: "Lombard Finance", role: "Content", detail: "Content for Lombard Finance.", stat: "May 2025 – Mar 2026", logo: "/logos/lombard-finance.svg", logoClass: "logo-badge logo-badge-fill" },
+  { name: "Higgsfield AI", role: "Partnership", detail: "Partnered with Higgsfield AI.", stat: "Jan 2026 – Feb 2026", logo: "/logos/higgsfield.jpg", logoClass: "logo-badge logo-badge-fill" },
 ];
 
 const skills = [
@@ -30,6 +58,7 @@ export default function Home() {
           <nav>
             <a href="#about">About</a>
             <a href="#work">Work</a>
+            <a href="#clips">Clips</a>
             <a href="#experience">Experience</a>
           </nav>
           <a className="nav-contact" href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Let us talk <span /></a>
@@ -58,7 +87,7 @@ export default function Home() {
         <section className="stats" aria-label="Highlights">
           <div><strong>100<span>+</span></strong><p>People onboarded</p></div>
           <div><strong>500<span>+</span></strong><p>Event participants</p></div>
-          <div><strong>04</strong><p>Web3 teams &amp; communities</p></div>
+          <div><strong>10<span>+</span></strong><p>Web3 teams &amp; communities</p></div>
           <div><strong>Always</strong><p>Curious to create</p></div>
         </section>
 
@@ -93,7 +122,13 @@ export default function Home() {
             {works.map((work, i) => (
               <a href={work.href} key={work.number} target="_blank" rel="noreferrer" className={"work-card work-card-" + i}>
                 <div className="work-card-top"><span>{work.type}</span><span className="work-open" /></div>
-                <div className="work-art" aria-hidden="true"><span /></div>
+                <div className="work-art" aria-hidden="true">
+                  {work.logo ? (
+                    <img className={work.logoClass} src={work.logo} alt={work.logoAlt} width={96} height={96} />
+                  ) : (
+                    <span />
+                  )}
+                </div>
                 <div className="work-card-bottom">
                   <span className="work-num">{work.number} / 05</span>
                   <h3>{work.title}</h3>
@@ -104,26 +139,73 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience" className="section experience">
-          <div className="section-kicker"><span>03 / EXPERIENCE</span><span>COMMUNITIES I HAVE HELPED SHAPE</span></div>
+        <section id="clips" className="section clips">
+          <div className="section-kicker"><span>03 / CLIPS</span><span>SHORT-FORM VIDEO</span></div>
           <div className="section-heading">
-            <h2>Built with<br /><em>good people.</em></h2>
-            <p>Collaborations that sharpened my craft<br />and expanded my perspective.</p>
+            <h2>Clips worth<br /><em>watching.</em></h2>
+            <p>A couple of clips from my profile on X.<br />Click through to watch the original posts.</p>
           </div>
-          <div className="experience-list">
-            {experience.map((item, i) => (
-              <div className="experience-row" key={item.name}>
-                <span className="experience-count">0{i + 1}</span>
-                <div className="experience-name"><h3>{item.name}</h3><p>{item.role}</p></div>
-                <p className="experience-detail">{item.detail}</p>
-                <span className="experience-stat">{item.stat}</span>
-              </div>
+          <div className="clips-grid">
+            {clips.map((clip) => (
+              <a href={clip.href} key={clip.href} target="_blank" rel="noreferrer" className="clip-card">
+                <div className="clip-thumb">
+                  <img src={clip.thumb} alt={clip.alt} width={clip.width} height={clip.height} />
+                  <span className="clip-play" aria-hidden="true" />
+                </div>
+                <div className="clip-meta">
+                  <h3>{clip.title}</h3>
+                  <p>
+                    <span className="clip-views">{clip.views}</span>
+                    <span className="clip-dot" />
+                    <span className="clip-date">{clip.date}</span>
+                  </p>
+                </div>
+              </a>
             ))}
           </div>
         </section>
 
+        <section id="experience" className="section experience">
+          <div className="section-kicker"><span>04 / EXPERIENCE</span><span>COMMUNITIES I HAVE HELPED SHAPE</span></div>
+          <div className="section-heading">
+            <h2>Built with<br /><em>good people.</em></h2>
+            <p>Some collaborations that sharpened my craft<br />and expanded my perspective.</p>
+          </div>
+          <div className="experience-list">
+            {experience.map((item, i) => {
+              const count = String(i + 1).padStart(2, "0");
+              const inner = (
+                <>
+                  <span className="experience-count">{count}</span>
+                  <div className="experience-name">
+                    <img className={item.logoClass} src={item.logo} alt={item.name + " logo"} width={44} height={44} />
+                    <div className="experience-name-text">
+                      <h3>{item.name}</h3>
+                      <p>{item.role}</p>
+                    </div>
+                  </div>
+                  <p className="experience-detail">{item.detail}</p>
+                  <span className="experience-stat">{item.stat}</span>
+                </>
+              );
+              if (item.href) {
+                return (
+                  <a className="experience-row experience-row-link" href={item.href} key={item.name} target="_blank" rel="noreferrer">
+                    {inner}
+                  </a>
+                );
+              }
+              return (
+                <div className="experience-row" key={item.name}>
+                  {inner}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
         <section className="section automation">
-          <div className="section-kicker"><span>04 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div>
+          <div className="section-kicker"><span>05 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div>
           <div className="automation-panel">
             <span className="panel-icon" />
             <div>
