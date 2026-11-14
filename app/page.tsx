@@ -59,7 +59,7 @@ const works = [
     number: "04",
     image: "/work/tiktok-ideas.jpg",
     imageAlt: "Cover for a TikTok video on surviving the bear market",
-    imagePosition: "center top",
+    imagePosition: "center 38%",
   },
   {
     type: "WEB3 / EDUCATION",
