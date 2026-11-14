@@ -218,3 +218,128 @@ a.experience-row-link:hover h3 {
   }
 }
 
+/* Events section — reuses Clips card chrome, portrait-friendly thumb. */
+
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) 1.15fr;
+  align-items: stretch;
+}
+
+.event-cover {
+  display: block;
+  color: inherit;
+  min-width: 0;
+}
+
+.event-card .event-thumb {
+  aspect-ratio: 3 / 4;
+  height: 100%;
+}
+
+.event-card .event-thumb img {
+  object-position: center top;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.event-title-row h3 {
+  margin: 4px 0 0;
+}
+
+.event-card .event-title-row .logo-badge {
+  width: 36px;
+  height: 36px;
+  margin-top: 2px;
+}
+
+.event-role {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d8aca2;
+  display: block;
+}
+
+.event-when {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 12px;
+  color: #a99da0;
+}
+
+.event-desc {
+  display: block;
+  margin: 14px 0 18px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: #aca2a5;
+}
+
+.event-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  margin: 0;
+}
+
+.event-link-primary {
+  color: #f3eae7;
+  font-weight: 700;
+  font-size: 12px;
+  border-bottom: 1px solid #bb8c83;
+  padding-bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.event-link-secondary {
+  font-size: 11px;
+  font-weight: 600;
+  color: #d8aca2;
+}
+
+.event-link-primary:hover,
+.event-link-secondary:hover {
+  color: var(--accent, #e9a18f);
+}
+
+@media (max-width: 850px) {
+  .event-card {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card .event-thumb {
+    aspect-ratio: 4 / 5;
+    height: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .event-card .event-thumb {
+    aspect-ratio: 3 / 4;
+  }
+}

@@ -29,6 +29,24 @@ const clips = [
   },
 ];
 
+const events = [
+  {
+    title: "Camp Nigeria Community Outreach",
+    role: "Co-host / Volunteer",
+    date: "15 Aug 2025",
+    place: "Living Fountain Orphanage, Lagos",
+    description: "Camp Nigeria community outreach where we shared food, clothes, hygiene kits and learning materials with 50+ children.",
+    cover: "/events/camp-outreach.jpg",
+    coverAlt: "Camp Nigeria Community Outreach at Living Fountain Orphanage, Lagos",
+    logo: "/logos/camp-network.svg",
+    logoClass: "logo-badge logo-badge-light",
+    primaryHref: "https://x.com/campnetworkxyz/status/1957394472850903480",
+    primaryLabel: "Watch the recap",
+    secondaryHref: "https://x.com/SamuelXeus/status/1957523659268190525",
+    secondaryLabel: "Shout-out from Samuel Xeus",
+  },
+];
+
 const experience = [
   { name: "Mojo AI", role: "Affiliate", detail: "Affiliate partner for Mojo AI.", stat: "Nov 2026 – Present", logo: "/logos/mojo-ai-avatar.jpg", logoClass: "logo-badge logo-badge-fill" },
   { name: "Web3 UNILAG", role: "Business Development Manager", detail: "Partnership outreach, sponsorships and community events.", stat: "Sep 2025 – Present", logo: "/logos/web3-unilag.png", logoClass: "logo-badge logo-badge-dark" },
@@ -59,6 +77,7 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#work">Work</a>
             <a href="#clips">Clips</a>
+            <a href="#events">Events</a>
             <a href="#experience">Experience</a>
           </nav>
           <a className="nav-contact" href="https://t.me/Master_Zeks" target="_blank" rel="noreferrer">Let us talk <span /></a>
@@ -165,8 +184,48 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="events" className="section events">
+          <div className="section-kicker"><span>04 / EVENTS</span><span>COMMUNITY</span></div>
+          <div className="section-heading">
+            <h2>Events.</h2>
+          </div>
+          <div className="events-grid">
+            {events.map((event) => (
+              <article className="clip-card event-card" key={event.title}>
+                <a href={event.primaryHref} target="_blank" rel="noreferrer" className="event-cover">
+                  <div className="clip-thumb event-thumb">
+                    <img src={event.cover} alt={event.coverAlt} width={675} height={1200} />
+                    <span className="clip-play" aria-hidden="true" />
+                  </div>
+                </a>
+                <div className="clip-meta event-meta">
+                  <div className="event-title-row">
+                    <img className={event.logoClass} src={event.logo} alt="" width={36} height={36} />
+                    <div>
+                      <p className="event-role">{event.role}</p>
+                      <h3>{event.title}</h3>
+                    </div>
+                  </div>
+                  <p className="event-when">
+                    <span className="clip-date">{event.date}</span>
+                    <span className="clip-dot" />
+                    <span>{event.place}</span>
+                  </p>
+                  <p className="event-desc">{event.description}</p>
+                  <p className="event-links">
+                    <a href={event.primaryHref} target="_blank" rel="noreferrer" className="event-link-primary">{event.primaryLabel}</a>
+                    {event.secondaryHref ? (
+                      <a href={event.secondaryHref} target="_blank" rel="noreferrer" className="event-link-secondary">{event.secondaryLabel}</a>
+                    ) : null}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="experience" className="section experience">
-          <div className="section-kicker"><span>04 / EXPERIENCE</span><span>COMMUNITIES I HAVE HELPED SHAPE</span></div>
+          <div className="section-kicker"><span>05 / EXPERIENCE</span><span>COMMUNITIES I HAVE HELPED SHAPE</span></div>
           <div className="section-heading">
             <h2>Built with<br /><em>good people.</em></h2>
             <p>Some collaborations that sharpened my craft<br />and expanded my perspective.</p>
@@ -205,7 +264,7 @@ export default function Home() {
         </section>
 
         <section className="section automation">
-          <div className="section-kicker"><span>05 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div>
+          <div className="section-kicker"><span>06 / MORE THAN CONTENT</span><span>ALWAYS EXPERIMENTING</span></div>
           <div className="automation-panel">
             <span className="panel-icon" />
             <div>
